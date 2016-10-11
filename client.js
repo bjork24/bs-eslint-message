@@ -14,17 +14,17 @@
       removeMsg()
       return
     }
-    if (!msg.styleEl) addStyles()
+    addStyles()
     addMessage({ title: 'ESLINT ERRORS', body: parseErrors(results) })
   })
 
   socket.on('msg', data => {
-    if (!msg.styleEl) addStyles()
+    addStyles()
     addMessage(data)
   })
 
   function removeMsg () {
-    msg.el.parentNode.removeChild(msg.el)
+    if (msg.el) msg.el.parentNode.removeChild(msg.el)
   }
 
   function parseErrors (results) {
@@ -39,6 +39,7 @@
   }
 
   function addStyles () {
+    if (msg.styleEl) return
     document.head.innerHTML += `
       <style id="${msg.styleId}">
         #${msg.elId} {
@@ -72,7 +73,7 @@
   }
 
   function addMessage ({ title, body }) {
-    if (msg.el) removeMsg()
+    removeMsg()
     document.body.innerHTML += `
       <div id="${msg.elId}">
         <h1>${title}</h1>
