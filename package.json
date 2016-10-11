@@ -5,6 +5,11 @@
   "main": "index.js",
   "author": "Dan Chilton",
   "license": "MIT",
+  "keywords": [
+    "browser sync plugin",
+    "browser-sync plugin",
+    "browserSync plugin"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
