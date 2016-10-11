@@ -1,0 +1,22 @@
+{
+  "name": "bs-eslint-message",
+  "version": "0.0.1",
+  "description": "BrowserSync plugin to display eslint errors (or any other message) within connected browsers",
+  "main": "index.js",
+  "author": "Dan Chilton",
+  "license": "MIT",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bjork24/bs-eslint-message.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bjork24/bs-eslint-message/issues"
+  },
+  "homepage": "https://github.com/bjork24/bs-eslint-message#readme",
+  "devDependencies": {
+    "browser-sync": "^2.0.0"
+  }
+}
