@@ -1,5 +1,3 @@
-// replace bs-fullscreen-message with this shit
-
 (function (socket) {
 
   const msg = {
@@ -10,12 +8,14 @@
   }
 
   socket.on('msg:eslint', results => {
-    if (results[0].errorCount === 0) {
+    const newErrors = results.filter(obj => obj.errorCount > 0)
+
+    if (!newErrors.length) {
       removeMsg()
       return
     }
     addStyles()
-    addMessage({ title: 'ESLINT ERRORS', body: parseErrors(results) })
+    addMessage({ title: 'ESLINT ERRORS', body: parseErrors(newErrors) })
   })
 
   socket.on('msg', data => {
