@@ -1,6 +1,6 @@
 {
   "name": "bs-eslint-message",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "BrowserSync plugin to display eslint errors (or any other message) within connected browsers",
   "main": "index.js",
   "author": "Dan Chilton",
